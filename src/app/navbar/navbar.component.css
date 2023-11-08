@@ -1,0 +1,16 @@
+#main-nav {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+#main-nav>li{
+    padding: 10px;
+    transition: 0.5s all;
+}
+#main-nav >li:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}

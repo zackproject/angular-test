@@ -1,0 +1,10 @@
+#location-component {
+    border: 2px solid black;
+    border-radius: 6px;
+    text-align: center;
+}
+
+#location-component > img {
+    width: 100%;
+    object-fit: cover;
+}

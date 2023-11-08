@@ -5,14 +5,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-navbar',
   standalone: true,
   imports: [CommonModule],
-  template: `
-      <ul id="main-nav">
-        <li>Home</li>
-        <li>Contact</li>
-        <li>News</li>
-        <li>About</li>
-      </ul>
-  `,
+  templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {

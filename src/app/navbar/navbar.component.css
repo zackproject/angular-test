@@ -4,13 +4,23 @@
     display: flex;
     justify-content: space-around;
     list-style-type: none;
+    padding: 0px;
+    text-align: center;
 }
-#main-nav>li{
+
+#main-nav>li {
     padding: 10px;
-    transition: 0.5s all;
+    transition: background-color 0.5s;
 }
-#main-nav >li:hover{
+
+#main-nav>li:hover {
     background-color: white;
     color: black;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    #main-nav {
+        flex-direction: column;
+    }
 }

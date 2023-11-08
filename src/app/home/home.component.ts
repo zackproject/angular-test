@@ -5,12 +5,7 @@ import { HousingLocationComponent } from '../housing-location/housing-location.c
   selector: 'app-home',
   standalone: true,
   imports: [CommonModule, HousingLocationComponent],
-  template: `
-    <p>
-      Texto del home component
-      <app-housing-location></app-housing-location>
-    </p>
-  `,
+  templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {

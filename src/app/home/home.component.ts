@@ -1,5 +1,5 @@
 //Pre llamada a la api en archvio housing.service.ts
-import { Component, inject } from '@angular/core';
+import { Component, inject,Inject } from '@angular/core';
 import { HousingService } from '../housing.service';
 import { HousingLocation } from '../housingLocation';
 import { environment } from './environments/environment';
@@ -26,7 +26,7 @@ export class HomeComponent {
 
   //La array se llenara a partir de 'getAllHousingLocations' del housing.service.ts
   housingLocationList: HousingLocation[] = [];
-  housingService: HousingService = inject(HousingService);
+  housingService: HousingService = Inject(HousingService);
 
   constructor() {
     this.housingLocationList = this.housingService.getAllHousingLocations();

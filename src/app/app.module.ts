@@ -6,6 +6,9 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HousingLocationComponent } from './housing-location/housing-location.component';
 import { CommonModule } from '@angular/common';
+import { DetailsComponent } from './details/details.component';
+import { RouterModule, Routes } from '@angular/router';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,12 +16,15 @@ import { CommonModule } from '@angular/common';
     NavbarComponent,
     HomeComponent,
     HousingLocationComponent,
+    DetailsComponent,
   ],
   imports: [
     //aqui van las dependencias
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    RouterModule,
+
     //aqui van los de components con STANDALONE TRUE
   ],
   providers: [],

@@ -7,16 +7,13 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HousingLocationComponent } from './housing-location/housing-location.component';
 import { CommonModule } from '@angular/common';
 import { DetailsComponent } from './details/details.component';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent,
     //sino no tiene STANDALONE va aqui
-    NavbarComponent,
-    HomeComponent,
-    HousingLocationComponent,
     DetailsComponent,
+ 
   ],
   imports: [
     //aqui van las dependencias
@@ -24,11 +21,14 @@ import { RouterModule, Routes } from '@angular/router';
     AppRoutingModule,
     CommonModule,
     RouterModule,
-
     //aqui van los de components con STANDALONE TRUE
+    AppComponent,
+    HomeComponent,
+    HousingLocationComponent,
+    NavbarComponent,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  //bootstrap: [AppComponent]  //Use the `bootstrapApplication` function for bootstrap instead.
 })
 /*selector: to describe how Angular refers to the component in templates.
 standalone: to describe whether the component requires a NgModule.

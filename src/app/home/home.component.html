@@ -1,3 +1,11 @@
 <p>Texto del home component</p>
+<h2>Llama a una casa !default</h2>
 <!-- La variable de [home-locations.components.ts] = "homeComponent.ts"-->
 <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
+
+<h2>Bucle de casas con datos</h2>
+
+<div id="houseListPage">
+    <app-housing-location *ngFor="let housingLocation of housingLocationList" [housingLocation]="housingLocation">
+    </app-housing-location>
+</div>

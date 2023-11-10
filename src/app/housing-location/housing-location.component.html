@@ -1,7 +1,6 @@
 <article id="location-component">
-    <h2>{{housingLocation.name}}</h2>
-    <img width="400" height="276" [src]="housingLocation.photo"
-        alt="Exterior photo of {{housingLocation.name}}">
-    <p>{{housingLocation.name}}</p>
+    <a [href]="housingLocation.photo"><img class="img-house-location" width="400" height="276" [src]="housingLocation.photo"
+        alt="Exterior photo of {{housingLocation.name}}"></a>
+    <h3>{{housingLocation.name}}</h3>
     <p class="listing-location">{{ housingLocation.city}}, {{housingLocation.state }}</p>
 </article>

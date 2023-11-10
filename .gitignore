@@ -1,8 +1,5 @@
 # Ignorar archivos de entorno de Angular
-/src/environments/*.ts
-
-# Ignorar archivos que contienen secretos o configuraciones sensibles
-/src/app/secrets/*.json
+src/app/home/environments/environment.ts
 
 
 # See http://help.github.com/ignore-files/ for more about ignoring files.

@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
     //sino no tiene STANDALONE va aqui
     NavbarComponent,
     HomeComponent,
-    HousingLocationComponent
+    HousingLocationComponent,
   ],
   imports: [
     //aqui van las dependencias

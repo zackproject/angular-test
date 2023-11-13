@@ -1,5 +1,5 @@
 section>img {
-width: 100%;
+    width: 100%;
 }
 
 article {
@@ -7,10 +7,44 @@ article {
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
-    background-color: lightgray;
     padding: 10px;
 }
-article >section{
+
+article>section {
     max-width: 500px;
 }
 
+
+.listing-apply>form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px;
+}
+
+form>input {
+    min-width: 400px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+form>label {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.listing-apply>form>button {
+    border: none;
+    background: black;
+    padding: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all 0.5s;
+}
+
+.listing-apply>form>button:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border: 1px solid black;
+}

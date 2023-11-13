@@ -37,18 +37,22 @@ export class HomeComponent {
   // filtro futuro de casas
   filteredLocationList: HousingLocation[] = [];
 
+  // llamada asincrona a la api de casas
   constructor() {
-    this.housingLocationList = this.housingService.getAllHousingLocations();
-    // por defecto el filtro tendra todas las casas
-    this.filteredLocationList = this.housingLocationList;
+    this.housingService.getAllHousingLocations().then((housingLocationList: HousingLocation[]) => {
+      //guarda todas las casas
+      this.housingLocationList = housingLocationList;
+      // la lista para filtrar sera igual que las casas
+      this.filteredLocationList = housingLocationList;
+    });
   }
 
-// home.component.html, si el filtro de ciudad coincide
+  // home.component.html, si el filtro de ciudad coincide
   filterResults(text: string) {
     if (!text) {
       this.filteredLocationList = this.housingLocationList;
     }
-  
+
     this.filteredLocationList = this.housingLocationList.filter(
       housingLocation => housingLocation?.city.toLowerCase().includes(text.toLowerCase())
     );

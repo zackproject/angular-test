@@ -29,9 +29,12 @@ export class DetailsComponent {
   });
 
   constructor() {
-    //devuelve la informacion de 'housingLocation' segun la 'id'
-    const housingLocationId = Number(this.route.snapshot.params['id']);
-    this.housingLocation = this.housingService.getHousingLocationById(housingLocationId);
+    //devuelve la informacion de 'housingLocation' segun la 'id' 10= baseDecimal
+    const housingLocationId = parseInt(this.route.snapshot.params['id'], 10);
+    //llamada asincrona por la casa por id
+    this.housingService.getHousingLocationById(housingLocationId).then(housingLocation => {
+      this.housingLocation = housingLocation;
+    });
   }
   // uso de formularios
   submitApplication() {

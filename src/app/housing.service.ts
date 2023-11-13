@@ -10,6 +10,7 @@ export class HousingService {
   //constructor() { }
   //url de environtments
   readonly baseUrl = environment.apiUrl;
+  readonly url = environment.url;
   housingLocationList: HousingLocation[] = [
     {
       id: 0,
@@ -114,12 +115,16 @@ export class HousingService {
   ];
 
 
-  getAllHousingLocations(): HousingLocation[] {
-    return this.housingLocationList;
+  // llamada asicrona a la api para todas las casas
+  async getAllHousingLocations(): Promise<HousingLocation[]> {
+    const data = await fetch(this.url);
+    return await data.json() ?? [];
   }
-  
-  getHousingLocationById(id: number): HousingLocation | undefined {
-    return this.housingLocationList.find(housingLocation => housingLocation.id === id);
+
+  // llamada asicrona a la api para una casa por id
+  async getHousingLocationById(id: number): Promise<HousingLocation | undefined> {
+    const data = await fetch(`${this.url}/${id}`);
+    return await data.json() ?? {};
   }
 
   //Send data form
